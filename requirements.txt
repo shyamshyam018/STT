@@ -6,3 +6,4 @@ streamlit==1.20.0
 streamlit_webrtc==0.45.0
 twilio~=8.1.0
 websockets
+pyaudio
