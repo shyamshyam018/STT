@@ -12,6 +12,8 @@ def main():
     navigation_options = ["Upload CSV", "Data Overview"]
     selected_navigation = st.sidebar.selectbox("Select an option", navigation_options)
 
+    data = None  # Define data variable outside of if statement
+
     if selected_navigation == "Upload CSV":
         st.header("Upload CSV Data")
         data_file = st.sidebar.file_uploader("Upload CSV", type=["csv"])
@@ -22,8 +24,10 @@ def main():
 
     elif selected_navigation == "Data Overview":
         st.header("Data Overview")
-        data = None
         st.write("Please upload a CSV file.")
+
+    # Rest of the code...
+
 
     # Chatbot interface
     st.header("Chatbot Interface")
